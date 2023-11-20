@@ -283,8 +283,6 @@ ol {
 
   margin-left: auto;
   margin-right: auto;
-
-  margin-bottom: 40px;
 }
 
 .sale-timer-text {
@@ -464,7 +462,7 @@ ol {
 /** section-three */
 
 .section-three {
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 50px;
 
   background: #090909;
@@ -478,7 +476,7 @@ ol {
   background-image: url(../images/ellipses/sect-three-ellipse-one.svg),
     url(../images/ellipses/sect-three-ellipse-two.svg);
   background-repeat: no-repeat;
-  background-position: left 100px top -10px, left 0 top 350px;
+  background-position: left 110px top 0, left 0 top 350px;
 }
 
 .sect-three-title {
@@ -494,6 +492,8 @@ ol {
   max-width: 125px;
   margin-left: auto;
   margin-right: auto;
+
+  padding-top: 20px;
 
   margin-bottom: 30px;
 }
@@ -598,7 +598,7 @@ ol {
 
 .five-table td,
 .five-table tr {
-  border: 1px solid #ffa132;
+  border: 0.5px solid #ffa132;
 
   padding: 10px 12px;
 }
@@ -624,6 +624,9 @@ ol {
 
 .table-galka {
   background: #fff7ee;
+
+  text-align: center;
+  font-size: 25px;
 
   max-width: 130px;
 }
@@ -820,18 +823,18 @@ ol {
 
 .five-list-dot {
   position: absolute;
-  left: 25px;
-  top: 93px;
+  left: 35px;
+  top: 90px;
 }
 
 .five-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 32px;
 
   max-width: 238px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 55px;
+  /* margin-right: auto; */
 
   margin-bottom: 100px;
 }
@@ -1184,7 +1187,7 @@ ol {
   line-height: normal;
 
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #15120e;
   backdrop-filter: blur(2px);
 
   padding: 20px;
