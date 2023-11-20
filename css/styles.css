@@ -51,6 +51,15 @@ ol {
   background-position: center;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header {
+    background-image: linear-gradient(180deg, rgba(9, 9, 9, 0) 0%, #090909 100%),
+      url(../images/header-background-mobile-2x.jpg);
+  }
+}
+
 .header .container {
   position: relative;
 }
