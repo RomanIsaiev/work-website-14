@@ -27,7 +27,7 @@
           створення захоплюючих, трендових образів, які підкреслять вашу
           індивідуальність
         </p>
-        <a class="header-button link" href="#more">Зареєструватись</a>
+        <button class="header-button" data-action="open-modal">Зареєструватись</button>
         <div class="header-sale-mark">
           <picture
             ><source
@@ -323,7 +323,7 @@
               <td class="table-text-third bottom-right-radius">477</td>
             </tr>
           </table>
-          <button class="buy-button">до оплати</button>
+          <button class="buy-button" data-action="open-modal">до оплати</button>
           <h3 class="four-bonus">БОНУСИ</h3>
           <picture
             ><source
@@ -519,7 +519,7 @@
             собі захоплюючі погляди чоловіків та свого коханого🥰
           </p>
           <p class="six-last-text">*Ну і трішки заздрощів від подруг?</p>
-          <button class="six-buy-button">Зареєструватись</button>
+          <button class="six-buy-button" data-action="open-modal">Зареєструватись</button>
           <h3 class="four-bonus">БОНУСИ</h3>
           <picture
             ><source
@@ -701,7 +701,25 @@
         </div>
       </div>
     </footer>
+     <div class="backdrop js-backdrop">
+      <div class="modal">
+        <button
+          class="modal-close-button"
+          type="button"
+          data-action="close-modal"
+        >
+          <img
+            src="./images/close-modal-icon.svg"
+            alt=" close"
+            width="30"
+            height="30"
+          />
+        </button>
+        <div id="kwiga-widget-1700479384"></div>
+      </div>
     <script src="./js/jquery-3.7.0.min.js"></script>
+    <script src="./js/js-modal.js" type="module"></script>
+    <script type="module" src="https://kwiga.com/build/js/kwiga-widget.js?t=1700479384&uuid=996e1185-3d33-4f33-be5c-d8a8f5422452&producer=https://kwiga.com/"></script>
     <script src="./js/faq.js"></script>
     <script src="./js/timer.js"></script>
     <script src="./js/timer-two.js"></script>
