@@ -496,19 +496,23 @@ ol {
   color: #fff;
   text-align: center;
   font-family: Unbounded;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 28.8px */
   text-transform: uppercase;
 
-  max-width: 225px;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
 
   padding-top: 20px;
 
   margin-bottom: 30px;
+}
+
+.up-size {
+  font-size: 24px;
 }
 
 .sect-three-title span {
