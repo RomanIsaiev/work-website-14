@@ -54,38 +54,40 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <p class="header-start">
-          Старт <span id="dateElement"></span> <span id="monthElement"></span>
-        </p>
-        <p class="header-course-category">Базовий курс з самомакіяжу</p>
-        <h1 class="header-title">І ТИ <br /><span>КОРОЛЕВА</span></h1>
-        <p class="header-description">
-          Дізнайтесь секрети професійних візажистів та освойте мистецтво
-          створення захоплюючих, трендових образів, які підкреслять вашу
-          індивідуальність
-        </p>
-        <button class="header-button" data-action="open-modal">
-          Зареєструватись
-        </button>
-        <div class="header-sale-mark">
-          <picture
-            ><source
-              srcset="
-                ./images/header-mark-1x.png 1x,
-                ./images/header-mark-2x.png 2x
-              "
-              media="(min-width: 320px)"
-              width="82"
-              height="82" />
-            <img
-              class="sale-mark"
-              src="./images/header-mark-1x.png"
-              alt="sale"
-              width="82"
-              height="82"
-          /></picture>
-          <p class="sale-number">-85%</p>
+      <div class="header-wrapper">
+        <div class="container">
+          <p class="header-start">
+            Старт <span id="dateElement"></span> <span id="monthElement"></span>
+          </p>
+          <p class="header-course-category">Базовий курс з самомакіяжу</p>
+          <h1 class="header-title">І ТИ <br /><span>КОРОЛЕВА</span></h1>
+          <p class="header-description">
+            Дізнайтесь секрети професійних візажистів та освойте мистецтво
+            створення захоплюючих, трендових образів, які підкреслять вашу
+            індивідуальність
+          </p>
+          <button class="header-button" data-action="open-modal">
+            Зареєструватись
+          </button>
+          <div class="header-sale-mark">
+            <picture
+              ><source
+                srcset="
+                  ./images/header-mark-1x.png 1x,
+                  ./images/header-mark-2x.png 2x
+                "
+                media="(min-width: 320px)"
+                width="82"
+                height="82" />
+              <img
+                class="sale-mark"
+                src="./images/header-mark-1x.png"
+                alt="sale"
+                width="82"
+                height="82"
+            /></picture>
+            <p class="sale-number">-85%</p>
+          </div>
         </div>
       </div>
     </header>
@@ -195,7 +197,56 @@
       </section>
       <section class="section-three">
         <div class="container">
-          <h2 class="sect-three-title">про <span>автора</span></h2>
+          <h2 class="sect-three-title">Результати <span>учениць</span></h2>
+          <div class="siema">
+            <div class="video-wrapper">
+              <iframe
+                class="sect-three-video"
+                src="https://player.vimeo.com/video/898734356?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                title="Приклад 1"
+              ></iframe>
+              <div class="video-wrapper"></div>
+            </div>
+            <div class="video-wrapper">
+              <iframe
+                class="sect-three-video"
+                src="https://player.vimeo.com/video/898734965?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                title="Приклад 2"
+              ></iframe>
+            </div>
+            <div class="video-wrapper">
+              <iframe
+                class="sect-three-video"
+                src="https://player.vimeo.com/video/898735250?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                title="Приклад 3"
+              ></iframe>
+            </div>
+          </div>
+          <div class="siema-button-control">
+            <button class="prev">
+              <img
+                src="./images/siema-button-left.svg"
+                alt="left"
+                width="36"
+                height="36"
+              />
+            </button>
+            <button class="next">
+              <img
+                src="./images/siema-button-right.svg"
+                alt="right"
+                width="36"
+                height="36"
+              />
+            </button>
+          </div>
+          <h2 class="sect-three-title">про <br /><span>автора</span></h2>
           <picture
             ><source
               srcset="
@@ -720,7 +771,31 @@
       type="module"
       src="https://kwiga.com/build/js/kwiga-widget.js?t=1700479384&uuid=996e1185-3d33-4f33-be5c-d8a8f5422452&producer=https://kwiga.com/"
     ></script>
+    <script src="./js/jquery-3.7.0.min.js"></script>
     <script src="./js/faq.js"></script>
+    <script src="./js/siema.min.js"></script>
+    <script>
+      const mySiema = new Siema({
+        selector: ".siema",
+        duration: 200,
+        easing: "ease-out",
+        perPage: 1,
+        startIndex: 0,
+        draggable: true,
+        multipleDrag: true,
+        threshold: 20,
+        loop: true,
+        rtl: false,
+        onInit: () => {},
+        onChange: () => {},
+      });
+      document
+        .querySelector(".prev")
+        .addEventListener("click", () => mySiema.prev());
+      document
+        .querySelector(".next")
+        .addEventListener("click", () => mySiema.next());
+    </script>
     <script src="./js/timer.js"></script>
     <script src="./js/timer-two.js"></script>
     <script src="./js/changeDate.js"></script>
